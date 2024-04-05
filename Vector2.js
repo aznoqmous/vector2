@@ -94,8 +94,10 @@ export default class Vector2 {
     }
 
     rotate(radian){
-        this.x = this.x * Math.cos(radian) - this.y * Math.sin(radian)
-        this.y = this.x * Math.sin(radian) + this.y * Math.cos(radian)
+        const x = this.x
+        const y = this.y
+        this.x = x * Math.cos(radian) - y * Math.sin(radian)
+        this.y = x * Math.sin(radian) + y * Math.cos(radian)
         return this
     }
 
